@@ -1,0 +1,27 @@
+{
+  "name": "HaveIt",
+  "description": "Afficher vos marques depuis le serveur !",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*",
+    "<all_urls>" , "contextMenus" ,"storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:8080/Marquage/marques.jsp","http://localhost:8080/Marquage/reussi.jsp"],
+      "js": ["importer.js","enreg.js"]
+    }
+  ],
+  "background" : {
+      "scripts": ["background.js"]
+    },
+  "browser_action": {
+      "default_title": "Afficher vos marques déjà enregistrées !",
+      "default_icon" : "have1.gif"
+  },
+  "manifest_version": 2,
+    "icons" : {
+    "128" : "have1.gif",
+    "64" : "have1.gif"
+  }
+}

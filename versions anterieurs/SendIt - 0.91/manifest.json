@@ -1,0 +1,27 @@
+{
+  "name": "SendIt",
+  "description": "Envoyer les marques au serveur !",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*",
+    "<all_urls>" , "contextMenus" ,"storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["enreg.js"]
+    }
+  ],
+  "background" : {
+      "scripts": ["background.js"]
+    },
+  "browser_action": {
+      "default_title": "Envoyer vos marques au serveur !",
+      "default_icon" : "save.gif"
+  },
+  "manifest_version": 2,
+    "icons" : {
+    "128" : "save.gif",
+    "64" : "save.gif"
+  }
+}

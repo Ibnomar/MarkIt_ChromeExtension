@@ -1,0 +1,21 @@
+{
+  "name": "MarkIt",
+  "description": "Marquer le texte",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*",
+    "<all_urls>" , "contextMenus"
+  ],
+  "background" : {
+      "scripts": ["background.js"]
+    },
+  "browser_action": {
+      "default_title": "Marquer votre texte !",
+      "default_icon": "pin2.gif"
+  },
+  "manifest_version": 2,
+  "icons" : {
+    "128" : "pin2.gif",
+    "64" : "pin2.gif"
+  }
+}
